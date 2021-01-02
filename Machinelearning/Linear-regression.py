@@ -33,6 +33,14 @@ sns.heatmap(df.isnull(), cbar=False)
 
 # split/Train/validate
 train_X, val_X, train_y, val_y = train_test_split(X, y, test_size = 0.3,random_state = 0)
+my_imputer = SimpleImputer()
+imputed_X_train = pd.DataFrame(my_imputer.fit_transform(train_X))
+imputed_X_valid = pd.DataFrame(my_imputer.transform(val_X))
+imputed_X_train.columns = train_X.columns
+imputed_X_valid.columns = val_X.columns
+print("MAE - Imputation:")
+print(score_dataset(imputed_X_train, imputed_X_valid, train_y, val_y))
+
 model = LinearRegression().fit(train_X, train_y)
 val_predictions = model.predict(val_X)
 print(mean_absolute_error(val_y, val_predictions))
