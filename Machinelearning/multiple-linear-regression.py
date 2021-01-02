@@ -1,6 +1,6 @@
 
 """
-Linear Regression
+Multiple Linear Regression
 Template - Kaggle Competitions/General Testdata/Open Datasets/Machine Learning Competitions
 Author - Robert Joseph
 
