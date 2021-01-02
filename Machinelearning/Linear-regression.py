@@ -24,10 +24,9 @@ from sklearn.metrics import mean_absolute_error
 
 # read data and summarize 
 df = pd.read_csv('/input',index = 'id')
-df['x1'] = df['column']
-df['y'] = df['target']
-y = df['y']
-X = df.drop(['y'])
+df.rename('columns={"column": "x1", "target": "y"}')
+y = df['y'].values
+X = table.drop(columns=['y'])
 df.head()
 df.describe()
 sns.heatmap(df.isnull(), cbar=False)
