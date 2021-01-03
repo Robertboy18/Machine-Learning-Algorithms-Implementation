@@ -1,3 +1,10 @@
+"""
+Computer Vision
+
+Template - Kaggle Competitions/General Testdata/Open Datasets/Machine Learning Competitions
+Author - Robert Joseph
+"""
+
 import os
 import timeit
 import time
@@ -56,6 +63,9 @@ resnext50_32x4d = models.resnext50_32x4d(pretrained=True)
 wide_resnet50_2 = models.wide_resnet50_2(pretrained=True)
 mnasnet = models.mnasnet1_0(pretrained=True)
 """
+
+# Do some data analysis 
+# figure out the image and such 
 
 def load_data(config):
     transform_train = transforms.Compose([
