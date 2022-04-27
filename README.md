@@ -1,4 +1,4 @@
-# Templates for Competitive Programming /Machine Learning Competitions
+# Templates for Machine Learning Competitions/Machine Learning Algorithms
 
 <hr>
 
